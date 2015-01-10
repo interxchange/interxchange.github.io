@@ -1,0 +1,10 @@
+# Site settings
+title: inter(x)change
+email: tomshen@cmu.edu
+description: >
+  Creative computing workshops & knowledge exchange.
+baseurl: ""
+url: "http://interxchange.github.io/"
+
+# Build settings
+markdown: kramdown
