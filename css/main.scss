@@ -27,6 +27,9 @@ footer a {
   font-weight: 400;
 }
 
-strong a {
+a {
   color: inherit;
+}
+a:hover {
+  opacity: 0.8;
 }
