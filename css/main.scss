@@ -13,9 +13,18 @@
   width: 100%;
 }
 
+.schedule-event {
+  color: #333;
+}
+
 .schedule-event ul, footer ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+#schedule > h3 {
+  color: #999;
+  font-style: italic;
 }
 
 footer a {
