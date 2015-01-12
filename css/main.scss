@@ -8,3 +8,25 @@
         "base",
         "syntax-highlighting"
 ;
+
+#signup {
+  width: 100%;
+}
+
+.schedule-event ul, footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer a {
+  color: inherit;
+}
+
+.content strong {
+  color: white;
+  font-weight: 400;
+}
+
+strong a {
+  color: inherit;
+}
