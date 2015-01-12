@@ -8,4 +8,5 @@ What: Lecture & Workshop
 Topic: Intro to Max/MSP
 Time: 8:30am - 11:20am
 Where: Frank-Ratchye STUDIO for Creative Inquiry
+Organizer: IACD
 ---

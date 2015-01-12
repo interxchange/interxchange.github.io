@@ -8,4 +8,5 @@ What: Lecture
 Topic: "Design Interface: Interface Design"
 Time: 6:30pm - 7:30pm
 Where: Kresge Theater
+Organizer: SOARCH
 ---

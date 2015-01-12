@@ -49,10 +49,11 @@ layout: default
                     <li><b>Topic:</b> {{ post.Topic }}</li>
                     <li><b>Time:</b> {{ post.Time }}</li>
                     <li><b>Where:</b> {{ post.Where }}</li>
+                    {% if post.Organizer %}<li><b>Organizer:</b> {{ post.Organizer }}</li>{% endif %}
                 </ul>
-                {{% if post.excerpt %}}
+                {% if post.excerpt %}
                 {{ post.excerpt }}
-                {{% endif %}}
+                {% endif %}
             </div>
         {% endfor %}
         </div>

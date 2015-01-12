@@ -8,4 +8,5 @@ What: Exhibition
 Topic: IACD Final Exhibition
 Time: TBA
 Where: Frank-Ratchye STUDIO for Creative Inquiry
+Organizer: IACD
 ---

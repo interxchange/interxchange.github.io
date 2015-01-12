@@ -8,5 +8,6 @@ What: Gallery Opening
 Topic: Artworks meditating arts reflective ability and absence of immediate self in various disciplines including installations, video projections and ‘flicker’ objects
 Time: 6:00pm - 8:50pm
 Where: Wood Street Gallery
+Organizer: Wood Street Gallery
 ---
 [Event link](http://woodstreetgalleries.org/portfolio-view/the-absence-of-self/)

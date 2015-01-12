@@ -8,4 +8,5 @@ What: Lecture
 Topic: Computational Audiovisuals
 Time: 5:00pm - 5:50pm
 Where: Kresge Theater
+Organizer: ART
 ---

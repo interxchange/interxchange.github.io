@@ -8,4 +8,5 @@ What: Workshop
 Topic: Rhino & Python
 Time: TBA
 Where: Frank-Ratchye STUDIO for Creative Inquiry
+Organizer: STUDIO
 ---

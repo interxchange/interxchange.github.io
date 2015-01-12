@@ -8,5 +8,6 @@ What: Workshop
 Topic: Git & Github
 Time: 8:30am - 11:20am
 Where: Frank-Ratchye STUDIO for Creative Inquiry
+Organizer: IACD
 ---
 **Limited seats**
