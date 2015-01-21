@@ -1,93 +1,395 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="splash-container">
-    <div class="splash">
-        <h1 class="splash-head">inter(x)change</h1>
-        <p class="splash-subhead">
-            Creative Computing Workshops &amp; Knowledge Exchange<br>
-        </p>
-        <p>
-            <a href="https://docs.google.com/forms/d/1Gv8vXFPg5fTDgLUG0eyMM6vDfUCA694uY_gldO_ynqc/viewform?usp=send_form" class="pure-button pure-button-primary">Sign up for updates!</a>
-        </p>
-    </div>
-</div>
+<head>
 
-<div class="content-wrapper">
-    <div class="content ribbon l-box-lrg pure-g" id="about">
-        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-            <img class="pure-img-responsive" alt="File Icons" width="300" src="img/common/file-icons.png">
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-            <h2 class="content-head content-head-ribbon">What is inter(x)change?</h2>
+    <title>Inter(x)change</title>
 
-            <p>
-                <strong>inter(x)change</strong> is a platform for identifying meaningful overlaps across different disciplines/agencies’ applications of technology and new media.
-            </p>
-            <p>
-                <strong>inter(x)change</strong> is where you can find out about the workshops, lectures, and exhibitions about creative computing.
-            </p>
-        </div>
-    </div>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <div class="content" id="schedule">
-        <h2 class="content-head is-center">Schedule of Events</h2>
-        <h3 class="is-center">(Updated Regularly)</h3>
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
 
-        <div class="pure-g">
-        {% for post in site.posts reversed %}
-            <div class="schedule-event l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-calendar-o"></i>
-                    {{ post.date | date: "%B %-d, %Y" }}
-                </h3>
-                <ul>
-                    <li><b>Who:</b> {{ post.Who }}</li>
-                    <li><b>What:</b> {{ post.What }}</li>
-                    <li><b>Topic:</b> {{ post.Topic }}</li>
-                    <li><b>Time:</b> {{ post.Time }}</li>
-                    <li><b>Where:</b> {{ post.Where }}</li>
-                    {% if post.Organizer %}<li><b>Organizer:</b> {{ post.Organizer }}</li>{% endif %}
-                </ul>
-                {% if post.excerpt %}
-                {{ post.excerpt }}
-                {% endif %}
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">i(x)c</a>
             </div>
-        {% endfor %}
-        </div>
-    </div>
 
-    <div class="content ribbon l-box-lrg pure-g" id="submissions">
-        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-            <img class="pure-img-responsive" alt="File Icons" width="200" src="img/common/file-icons2.png">
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
-
-            <h2 class="content-head content-head-ribbon">CALL FOR SUBMISSIONS</h2>
-
-            <p>
-                <strong>inter(x)change</strong> is accepting submissions from:
-
-                <ul>
-                  <li><strong>student</strong> experts in a certain tool or workflow, and would like to share the knowledge.</li>
-                  <li><strong>faculty</strong> members already organizing workshops, lectures, exhibitions, or reviews who would like to offer seats to the public.</li>
-                  <li><strong>anyone</strong> organizing events about creative computing</li>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">Schedule</a>
+                    </li>
                 </ul>
-                If interested, please <strong><a href="https://docs.google.com/forms/d/1krGSTOJLWBtjbeYVmM0GO6C5sdhwmwqtONidNC1RYlk/viewform?usp=send_form">submit your event for consideration</a></strong>.
-
-            </p>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-    </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-    <footer class="footer l-box is-center">
-        <p>Hosted &amp; Organized by:</p>
-        <ul>
-            <li><a href="http://www.cmu.edu/architecture/">Carnegie Mellon University School of Architecture</a></li>
-            <li><a href="http://studioforcreativeinquiry.org/">Frank-Ratchye STUDIO for Creative Inquiry</a></li>
-            <li><a href="http://scottylabs.org/">ScottyLabs</a></li>
-        </ul>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/icon.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">inter(x)change</span>
+                        <span class="skills">Creative Computing Workshops & Knowledge Exchange</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-dark">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p><b>inter(x)change</b> is a platform for identifying meaningful overlaps across different disciplines/agencies’ applications of technology and new media.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p><b>inter(x)change</b> is where you can find out about the workshops, lectures, and exhibitions about creative computing.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="https://docs.google.com/forms/d/1Gv8vXFPg5fTDgLUG0eyMM6vDfUCA694uY_gldO_ynqc/viewform" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> Get Updates
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Schedule</h2>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%231F8DD6&amp;src=andrew.cmu.edu_593lbkqhpqbnm2rqojtfl7unvk%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style=" border-width:0 " width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-6">
+                        <h3>Hosted by:</h3>
+                        <a href="http://www.cmu.edu/architecture/"><p>Carnegie Mellon University School of Architecture</p></a>
+                        <a href="http://studioforcreativeinquiry.org"><p>Frank-Ratchye STUDIO for Creative Inquiry</p></a>
+                        <a href="http://www.scottylabs.org"><p>ScottyLabs</p></a>
+                    </div> 
+                    <div class="footer-col col-md-6">
+                        <h3>Call for Submissions</h3>
+                        <p><!--student experts in a certain tool or workflow, and would like to share the knowledge. <br> faculty members already organizing workshops, lectures, exhibitions, or reviews who would like to offer seats to the public. <br> anyone organizing events about creative computing --> If interested please <a href="https://docs.google.com/forms/d/1krGSTOJLWBtjbeYVmM0GO6C5sdhwmwqtONidNC1RYlk/viewform">submit your event for consideration</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
-</div>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+
+</body>
+
+</html>
